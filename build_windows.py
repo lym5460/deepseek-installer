@@ -5,6 +5,11 @@ from PyInstaller.__main__ import run
 
 def build_windows_exe():
     """构建Windows可执行文件"""
+    # 设置控制台输出编码
+    if sys.platform.startswith('win'):
+        import codecs
+        sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
+        
     # 清理之前的构建
     if os.path.exists('build'):
         shutil.rmtree('build')
@@ -25,7 +30,8 @@ def build_windows_exe():
     # 运行PyInstaller
     run(options)
     
-    print("构建完成！可执行文件位于 dist/DeepseekInstaller.exe")
+    # 使用英文输出避免编码问题
+    print("Build completed! Executable file is located at dist/DeepseekInstaller.exe")
 
 if __name__ == "__main__":
     build_windows_exe() 
