@@ -17,7 +17,6 @@ def build_windows_exe():
         '--name=DeepseekInstaller',  # 可执行文件名
         '--windowed',  # 使用GUI模式
         '--onefile',  # 打包成单个文件
-        '--icon=resources/icon.ico',  # 图标文件
         '--add-data=src/config/config.yaml;src/config',  # 添加配置文件
         '--clean',  # 清理临时文件
         '--noconfirm',  # 不确认覆盖
