@@ -1,0 +1,58 @@
+# 安装路径配置
+paths:
+  windows:
+    base_path: "C:\\Program Files\\Ollama"
+    models_path: "C:\\Program Files\\Ollama\\models"
+    logs_path: "C:\\ProgramData\\Ollama\\logs"
+  linux:
+    base_path: "/usr/local/ollama"
+    models_path: "/usr/local/ollama/models"
+    logs_path: "/var/log/ollama"
+  darwin:
+    base_path: "/usr/local/ollama"
+    models_path: "/usr/local/ollama/models"
+    logs_path: "/var/log/ollama"
+
+# 可用模型配置
+models:
+  deepseek-r1:1.5b:
+    gpu_memory: 4
+    system_memory: 8
+    disk_space: 2
+
+  deepseek-r1:7b:
+    gpu_memory: 8
+    system_memory: 16
+    disk_space: 5
+
+  deepseek-r1:14b:
+    gpu_memory: 12
+    system_memory: 32
+    disk_space: 10
+
+  deepseek-r1:32b:
+    gpu_memory: 24
+    system_memory: 48
+    disk_space: 25
+
+  deepseek-r1:70b:
+    gpu_memory: 48
+    system_memory: 64
+    disk_space: 50
+
+  deepseek-r1:671b:
+    gpu_memory: 400
+    system_memory: 512
+    disk_space: 450
+
+system_requirements:
+  min_ram: 8  # GB
+  min_disk: 10  # GB
+  cuda_version: "11.7"
+  driver_version: "470.0"
+
+ui_settings:
+  language: "zh_CN"
+  theme: "light"
+  auto_start: true
+  check_updates: true 
